@@ -271,29 +271,29 @@ void init_game(int argc, char *argv[]) {
     /* Don't draw backfaces */
     m7_backface(0);
 
-    tiles = bm_load("res/HardVacuum.gif");
+    tiles = bm_load("../Resources/HardVacuum.gif");
     if(!tiles) {
         exit_error("Unable to load tiles");
     }
 
-    sky = bm_load("res/sky.gif");
+    sky = bm_load("../Resources/sky.gif");
     if(!sky) {
         exit_error("Unable to load sky");
     }
 
-    guy = bm_load("res/char.gif");
+    guy = bm_load("../Resources/char.gif");
     if(!guy) {
         exit_error("Unable to load guy");
     }
     bm_set_color(guy, bm_atoi("#209C00"));
 
-    props = bm_load("res/buildings.gif");
+    props = bm_load("../Resources/buildings.gif");
     if(!props) {
         exit_error("Unable to load props");
     }
     bm_set_color(props, bm_atoi("#008A76"));
 
-    obj = obj_load("res/pyramid.obj");
+    obj = obj_load("../Resources/pyramid.model");
     if(!obj)
         exit_error("Unable to load OBJ");
 }
