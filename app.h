@@ -1,10 +1,10 @@
 #define WINDOW_CAPTION "Mode7 Demo"
 
 #define EPX_SCALE       0
-#define SCREEN_SCALE    4
+#define SCREEN_SCALE    2
 
-#define SCREEN_WIDTH    320
-#define SCREEN_HEIGHT   200
+#define SCREEN_WIDTH    640
+#define SCREEN_HEIGHT   360
 
 #define LOG_FILE_NAME "mode7.log"
 
