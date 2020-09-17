@@ -206,7 +206,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             clear_keys();
 
-            cmdl = _strdup(GetCommandLine());
+            cmdl = strdup(GetCommandLine());
             argc = split_cmd_line(cmdl, argv, MAX_ARGS);
 
             init_game(argc, argv);

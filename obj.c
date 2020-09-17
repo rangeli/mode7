@@ -13,7 +13,7 @@
 
 #if defined(WIN32) && defined(_MSC_VER)
 #  define SAFE_C11
-#  define strdup _strdup
+#  define strdup strdup
 #endif
 
 typedef struct {
@@ -618,7 +618,7 @@ Material *mtl_add(MtlLibrary *lib, const char *name) {
         lib->mtls = realloc(lib->mtls, lib->a * sizeof *lib->mtls);
     }
     Material *m = &lib->mtls[lib->n++];
-    m->name = _strdup(name);
+    m->name = strdup(name);
     return m;
 }
 static MtlColor parse_mtl_color(OBJ_Parser *p) {
