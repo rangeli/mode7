@@ -433,7 +433,7 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 
-    renderer = SDL_CreateRenderer(window, -1, 0);
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if(!renderer) {
 		rerror("%s","SDL_CreateRenderer()");
 		return 1;
