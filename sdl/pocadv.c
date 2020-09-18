@@ -432,6 +432,9 @@ int main(int argc, char *argv[]) {
 		rerror("%s","SDL_CreateWindow()");
 		return 0;
 	}
+	#if FULLSCREEN
+    SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
+	#endif
 
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if(!renderer) {

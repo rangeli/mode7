@@ -6,6 +6,8 @@
 #define SCREEN_WIDTH    320
 #define SCREEN_HEIGHT   200
 
+#define FULLSCREEN 0
+
 #define LOG_FILE_NAME "mode7.log"
 
 /* Set to one to make ESC quit the game - when debugging */

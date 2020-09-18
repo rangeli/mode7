@@ -183,12 +183,6 @@ int render(double elapsed) {
 
     update_all(elapsed);
 
-    bm_set_color(screen, bm_atoi("black"));
-    bm_clear(screen);
-
-    bm_set_color(screen, bm_atoi("white"));
-    bm_rect(screen, 9, 9, SCREEN_WIDTH - 10, SCREEN_HEIGHT - 10);
-
     m7_clear_zbuf();
 
     m7_clear_stencil();
@@ -259,7 +253,7 @@ void init_game(int argc, char *argv[]) {
     spr_x = 160; spr_z = 200;
     spr_angle = 180 * M_PI / 180;
 
-    m7_init(10, 10, SCREEN_WIDTH - 20, SCREEN_HEIGHT - 20);
+    m7_init(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 
     m7_enable_fog(0x8090A0);
 
